@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <script>
+    (function() {
+      const theme = localStorage.getItem('nex_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Service Details - NexMutation | AI &amp; Technology Solutions</title>
+  <meta name="description" content="Explore NexMutation's AI services in detail — Data Science, Generative AI, AI Strategy Consulting, Intelligent Automation, and Cognitive Machine Learning.">
+  <meta name="keywords" content="NexMutation Services, AI Solutions, Predictive Analytics, Generative AI, AI Strategy, Machine Learning">
+  <link rel="canonical" href="https://nexmutation.com/service-details.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nexmutation.com/service-details.html">
+  <meta property="og:title" content="Service Details - NexMutation | AI & Technology Solutions">
+  <meta property="og:description" content="Deep dive into NexMutation's AI services: Data Science, Generative AI, AI Strategy Consulting, Intelligent Automation, and Cognitive Machine Learning.">
+  <meta property="og:image" content="https://nexmutation.com/assets/img/website_logo.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://nexmutation.com/service-details.html">
+  <meta name="twitter:title" content="Service Details - NexMutation | AI & Technology Solutions">
+  <meta name="twitter:description" content="Deep dive into NexMutation's AI services: Data Science, Generative AI, AI Strategy Consulting, Intelligent Automation, and Cognitive Machine Learning.">
+  <meta name="twitter:image" content="https://nexmutation.com/assets/img/website_logo.png">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css?v=3.1" rel="stylesheet">
+
+  <style>
+    /* Tab sidebar */
+    .services-list a {
+      display: flex;
+      align-items: center;
+      padding: 12px 16px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      font-weight: 500;
+      color: var(--heading-color, #333);
+      background: #f4f6fb;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      text-decoration: none;
+      border-left: 4px solid transparent;
+    }
+    .services-list a:hover,
+    .services-list a.active {
+      background: var(--accent-color, #68a4c4);
+      color: #fff;
+      border-left-color: #214e68;
+      box-shadow: 0 4px 12px rgba(104, 164, 196, 0.25);
+    }
+    .services-list a i {
+      margin-right: 12px;
+      font-size: 1.15rem;
+    }
+
+    /* Service content panes */
+    .service-pane { display: none; }
+    .service-pane.active {
+      display: block;
+      animation: fadeInTab 0.35s ease-in-out;
+    }
+    @keyframes fadeInTab {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Smooth image transition */
+    .services-img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 24px;
+      object-fit: cover;
+      max-height: 380px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Category Pill */
+    .service-kicker {
+      display: inline-block;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-weight: 700;
+      color: var(--accent-color, #68a4c4);
+      background: rgba(104, 164, 196, 0.12);
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    .service-pane h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--heading-color, #1a202c);
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .service-lead {
+      font-size: 1.08rem;
+      line-height: 1.75;
+      color: #4a5568;
+      margin-bottom: 28px;
+    }
+
+    .service-section-title {
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: var(--heading-color, #1a202c);
+      margin-top: 36px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .service-section-title i {
+      color: var(--accent-color, #68a4c4);
+      font-size: 1.3rem;
+    }
+
+    /* Problem / Solution Cards Grid */
+    .card-deck-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .problem-card {
+      background: #fbfcfe;
+      border: 1px solid #e6ecf5;
+      border-radius: 10px;
+      padding: 18px 20px;
+      transition: all 0.25s ease;
+    }
+    .problem-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      border-color: #cbd8ec;
+    }
+    .problem-card h5 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--heading-color, #1a202c);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .problem-card h5 i {
+      color: #e65100;
+      font-size: 1.05rem;
+    }
+    .problem-card p {
+      font-size: 0.92rem;
+      color: #555;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Deliverables list */
+    .deliverables-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px 0;
+    }
+    .deliverables-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-size: 0.96rem;
+      line-height: 1.6;
+      color: #444;
+    }
+    .deliverables-list li i {
+      color: var(--accent-color, #68a4c4);
+      font-size: 1.25rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* Step Process Timeline */
+    .process-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .process-step-box {
+      background: #fff;
+      border: 1px solid #e9edf4;
+      border-radius: 10px;
+      padding: 16px 14px;
+      position: relative;
+    }
+    .step-badge {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--accent-color, #68a4c4);
+      background: rgba(104, 164, 196, 0.12);
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+    .process-step-box h6 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #1a202c;
+    }
+    .process-step-box p {
+      font-size: 0.84rem;
+      color: #666;
+      margin: 0;
+      line-height: 1.45;
+    }
+
+    /* Case highlight */
+    .case-highlight-box {
+      background: linear-gradient(135deg, #f7faff 0%, #eef4fd 100%);
+      border-left: 4px solid var(--accent-color, #68a4c4);
+      padding: 20px 24px;
+      border-radius: 0 10px 10px 0;
+      margin: 28px 0;
+    }
+    .case-highlight-box h6 {
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: #1a202c;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .case-highlight-box h6 i {
+      color: var(--accent-color, #68a4c4);
+    }
+    .case-highlight-box p {
+      font-size: 0.93rem;
+      color: #4a5568;
+      margin: 0;
+      line-height: 1.65;
+    }
+
+    /* CTA Banner */
+    .service-cta-banner {
+      background: #151d2a;
+      color: #fff;
+      border-radius: 12px;
+      padding: 26px 30px;
+      margin-top: 36px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .service-cta-banner h4 {
+      color: #fff;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .service-cta-banner p {
+      color: #b0b8c4;
+      font-size: 0.93rem;
+      margin: 0;
+      max-width: 520px;
+    }
+    .btn-service-cta {
+      display: inline-block;
+      background-color: var(--accent-color, #68a4c4);
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+    .btn-service-cta:hover {
+      background-color: #5591b1;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(104, 164, 196, 0.35);
+    }
+  </style>
+</head>
+
+<body class="service-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/website_logo.png" alt="NexMutation Logo">
+        <span class="sitename">NexMutation</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown"><a href="services.html" class="active"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="services.html">All Services</a></li>
+              <li><a href="service-details.html">Data Science &amp; Predictive Analytics</a></li>
+              <li><a href="service-details.html">AI Strategy Consulting</a></li>
+              <li><a href="service-details.html">Generative AI Services</a></li>
+              <li><a href="service-details.html">AI-Powered Automation</a></li>
+            </ul>
+          </li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Toggle dark/light theme" title="Toggle dark/light theme">
+        <i class="bi bi-moon-stars-fill"></i>
+      </button>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container position-relative">
+        <h1>Our Services, Up Close</h1>
+        <p>Pick a service from the list and see exactly what we do, how we do it, and what you can expect from working with us.</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li class="current">Service Details</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Service Details Section -->
+    <section id="service-details" class="service-details section">
+
+      <div class="container">
+
+        <div class="row gy-5">
+
+          <!-- LEFT SIDEBAR: Services List + Help Box -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="service-box">
+              <h4>Our Services</h4>
+              <div class="services-list" id="service-tabs">
+                <a href="#" class="active" data-tab="tab-1" id="tab-btn-1">
+                  <i class="bi bi-bar-chart-line"></i><span>Data Science &amp; Predictive Analytics</span>
+                </a>
+                <a href="#" data-tab="tab-2" id="tab-btn-2">
+                  <i class="bi bi-compass"></i><span>AI Strategy Consulting</span>
+                </a>
+                <a href="#" data-tab="tab-3" id="tab-btn-3">
+                  <i class="bi bi-stars"></i><span>Generative AI &amp; LLMs</span>
+                </a>
+                <a href="#" data-tab="tab-4" id="tab-btn-4">
+                  <i class="bi bi-robot"></i><span>AI-Powered Automation</span>
+                </a>
+                <a href="#" data-tab="tab-5" id="tab-btn-5">
+                  <i class="bi bi-cpu"></i><span>Cognitive Machine Learning</span>
+                </a>
+              </div>
+            </div><!-- End Services List -->
+
+            <div class="help-box d-flex flex-column justify-content-center align-items-center">
+              <i class="bi bi-headset help-icon"></i>
+              <h4>Have Questions?</h4>
+              <p class="d-flex align-items-center mt-2 mb-0"><i class="bi bi-telephone me-2"></i> <span>+91 9643231053</span></p>
+              <p class="d-flex align-items-center mt-1 mb-0"><i class="bi bi-envelope me-2"></i> <a href="mailto:nexmutation.technology@gmail.com">nexmutation.technology@gmail.com</a></p>
+            </div>
+
+          </div>
+
+          <!-- RIGHT PANEL: Tab Content -->
+          <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
+
+            <!-- TAB 1: Data Science & Predictive Analytics -->
+            <div class="service-pane active" id="tab-1">
+              <img src="assets/img/service-detail-1.jpg" alt="Data scientist reviewing analytics dashboard" class="img-fluid services-img">
+              <span class="service-kicker"><i class="bi bi-bar-chart-line me-1"></i> Data Science &amp; Predictive Analytics</span>
+              <h2>Turning Messy Spreadsheets Into Confident Tomorrow Decisions</h2>
+              <p class="service-lead">
+                Most businesses aren't starved of data — they're drowning in it. You have years of customer orders, invoices, support interactions, and website clicks scattered across tools, but nobody has the time or the tools to connect the dots. We help you transform raw numbers into clear, practical answers that take the guesswork out of running your business.
+              </p>
+
+              <!-- Section: Problems Solved -->
+              <div class="service-section-title"><i class="bi bi-exclamation-triangle"></i> Everyday Headaches We Solve For You</div>
+              <div class="card-deck-grid">
+                <div class="problem-card">
+                  <h5><i class="bi bi-x-circle"></i> Inventory Guesswork</h5>
+                  <p>Ordering too much stock that ties up capital in warehouses, or stocking out right when demand spikes and losing customers.</p>
+                </div>
+                <div class="problem-card">
+                  <h5><i class="bi bi-x-circle"></i> Surprise Customer Churn</h5>
+                  <p>Only realizing high-value clients are unhappy after they've already canceled, instead of spotting warning signs weeks earlier.</p>
+                </div>
+                <div class="problem-card">
+                  <h5><i class="bi bi-x-circle"></i> Manual Monday Reports</h5>
+                  <p>Teams spending 10+ hours every week downloading CSVs, cleaning spreadsheets, and making charts that are stale by Wednesday.</p>
+                </div>
+                <div class="problem-card">
+                  <h5><i class="bi bi-x-circle"></i> Blind Pricing Decisions</h5>
+                  <p>Guessing discount thresholds without knowing the exact elasticity that maximizes gross profit across seasons.</p>
+                </div>
+              </div>
+
+              <!-- Section: Deliverables -->
+              <div class="service-section-title"><i class="bi bi-check2-circle"></i> What You Actually Get From Us</div>
+              <ul class="deliverables-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <div><strong>Custom Predictive Models:</strong> We build tailored models trained on your specific sales cycles, customer types, and seasonal trends — never a generic, one-size-fits-all formula.</div>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <div><strong>Automated Cloud Pipelines:</strong> Data flows smoothly from your CRM, ERP, and payment processors straight into clean data warehouses without manual human copying.</div>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <div><strong>Living Decision Dashboards:</strong> Clean, interactive dashboards that any manager or founder can glance at for 30 seconds and know exactly what actions to take today.</div>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <div><strong>Model Health &amp; Accuracy Monitoring:</strong> Customer habits shift over time. We continuously track prediction accuracy and recalibrate models so your insights never go stale.</div>
+                </li>
+              </ul>
+
+              <!-- Section: 4-Step Process -->
+              <div class="service-section-title"><i class="bi bi-diagram-3"></i> How We Work Together</div>
+              <div class="process-steps-grid">
+                <div class="process-step-box">
+                  <span class="step-badge">STEP 01</span>
+                  <h6>Data Audit</h6>
+                  <p>We review your existing databases and spreadsheets to see what is usable today.</p>
+                </div>
+                <div class="process-step-box">
+                  <span class="step-badge">STEP 02</span>
+                  <h6>Proof-of-Concept</h6>
+                  <p>We build a working model in 2 weeks tested against your historical numbers.</p>
+                </div>
+                <div class="process-step-box">
+                  <span class="step-badge">STEP 03</span>
+                  <h6>Clean Integration</h6>
+                  <p>We hook predictions straight into the dashboards and tools your team already uses.</p>
+                </div>
+                <div class="process-step-box">
+                  <span class="step-badge">STEP 04</span>
+                  <h6>Ongoing Tuning</h6>
+                  <p>We review performance monthly to make sure your predictions stay sharp and profitable.</p>
+                </div>
+              </div>
+
+              <!-- Case Highlight -->
+              <div class="case-highlight-box">
+                <h6><i class="bi bi-trophy"></i> Case in Point: Real Impact</h6>
+                <p>A regional retail distribution client was losing approximately 14% of their margin to overstocked warehouse inventory. Within 90 days of deploying our demand prediction models, their excess inventory dropped by <strong>32%</strong> while order fulfillment rates improved from 86% to <strong>98.2%</strong>.</p>
+              </div>
+
+              <!-- CTA Banner -->
+              <div class="service-cta-banner">
+                <div>
+                  <h4>Ready to make sense of your business numbers?</h4>
+                  <p>Let's have a 20-minute introductory chat. No sales pressure, no tech jargon — just an honest conversation about what your data can do.</p>
+                </div>
+                <a href="contact.html" class="btn-service-cta">Talk With a Data Scientist</a>
+              </div>
+            </div>
+
+            <!-- TAB 2: AI Strategy Consulting -->
+            <div class="service-pane" id="tab-2">
+              <img src="assets/img/service-detail-4.jpg" alt="AI strategy meeting with business executives" class="img-fluid services-img">
+              <span class="service-kicker"><i class="bi bi-compass me-1"></i> AI Strategy &amp; Roadmap Consulting</span>
+              <h2>Practical AI Direction Built for Real Work, Not Conference Slides</h2>
+              <p class="service-lead">
+                Every business owner and executive is being told they must adopt AI immediately or get left behind. But jumping into AI without a clear strategy is the easiest way to burn budgets on flashy tools that nobody ends up using. We help you cut through the marketing hype and build a realistic, ROI-backed roadmap tailored specifically to your company's size, budget, and culture.
+              </p>
+
+              <!-- Section: Problems Solved -->
+              <div class="service-section-title"><i class="bi bi-exclamation-triangle"></i> Everyday Headaches We Solve For You</div>
+              <div class="card-deck-grid">
+                <div class="problem-card">
+                  <h5><i class="bi bi-x-circle"></i> Analysis Paralysis</h5>
+                  <p>Overwhelmed by hundreds of new AI announcements every week without knowing which ones actually move the needle for your business.</p>
+                </div>
+                <div class="problem-card">
+                  <h5><i class="bi bi-x-circle"></i> Wasted Software Budgets</h5>
+                  <p>Spending tens of thousands on expensive enterprise subscriptions or custom software that employees quietly abandon after two weeks.</p>
+                </div>
+                <div class="problem-card">
+                  <h5><i class="bi bi-x-circle"></i> Team Resistance &amp; Fear</h5>
+                  <p>Staff feeling anxious that AI is here to replace them, leading to hesitation, poor tool adoption, and hidden friction.</p>
+                </div>
+                <div class="problem-card">
+                  <h5><i class="bi bi-x-circle"></i> Data Privacy Exposure</h5>
+                  <p>Unknowingly pasting confidential customer data or contracts into public AI models that store and train on your proprietary IP.</p>
+                </div>
+              </div>
+
+              <!-- Section: Deliverables -->
+              <div class="service-section-title"><i class="bi bi-check2-circle"></i> What You Actually Get From Us</div>
+              <ul class="deliverables-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <div><strong>Comprehensive AI Readiness Audit:</strong> We evaluate your existing data infrastructure, security policies, and team workflows to give you an honest score of what is ready now and what needs cleanup first.</div>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <div><strong>Prioritized ROI-Ranked Roadmap:</strong> A crystal-clear blueprint that ranks every potential AI project by development cost versus bottom-line return, putting quick wins upfront.</div>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <div><strong>Unbiased Build vs. Buy Guidance:</strong> We tell you honestly when an inexpensive off-the-shelf software tool solves your problem versus when a custom build provides an undeniable competitive edge.</div>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <div><strong>Executive &amp; Team Enablement Workshops:</strong> Engaging, hands-on training sessions that teach your managers and teams how to work alongside AI tools safely and productively.</div>
+                </li>
+              </ul>
+
+              <!-- Section: 4-Step Process -->
+              <div class="service-section-title"><i class="bi bi-diagram-3"></i> How We Work Together</div>
+              <div class="process-steps-grid">
+                <div class="process-step-box">
+                  <span class="step-badge">STEP 01</span>
+                  <h6>Discovery</h6>
+                  <p>We shadow key team workflows to understand where your hours and money actually go.</p>
+                </div>
+                <div class="process-step-box">
+                  <span class="step-badge">STEP 02</span>
+                  <h6>ROI Scoring</h6>
+                  <p>Every candidate project is scored for time-to-value, technical feasibility, and financial upside.</p>
+                </div>
+                <div class="process-step-box">
+                  <span class="step-badge">STEP 03</span>
+                  <h6>Architecture Plan</h6>
+                  <p>A step-by-step implementation guide with recommended tech stacks, costs, and timelines.</p>
+                </div>
+                <div class="process-step-box">
+                  <span class="step-badge">STEP 04</span>
+                  <h6>Pilot Oversight</h6>
+                  <p>We sit alongside your team through the first project rollout to guarantee successful adoption.</p>
+                </div>
+              </div>
+
+              <!-- Case Highlight -->
+              <div class="case-highlight-box">
+                <h6><i class="bi bi-trophy"></i> Case in Point: Real Impact</h6>
+                <p>A mid-sized professional services firm was about to commit ₹35 Lakhs ($42,000 USD) to an unnecessarily complex bespoke AI tool. Following our 2-week strategic audit, we identified that an optimized combination of open-source models and workflow automation solved their exact bottleneck in 3 weeks at less than <strong>20% of their initial estimated cost</strong>.</p>
+              </div>
+
+              <!-- CTA Banner -->
+              <div class="service-cta-banner">
+                <div>
+                  <h4>Want honest advice on where AI fits in your business?</h4>
+                  <p>Book a free 30-minute strategic consultation with our team. We'll give you straight answers with zero technical jargon.</p>
+                </div>
+                <a href="contact.html" class="btn-service-cta">Book Free Strategy Call</a>
+              </div>
+            </div>
+
+            <!-- TAB 3: Generative AI & LLMs -->
+            <div class="service-pane" id="tab-3">
+              <img src="assets/img/service-detail-2.jpg" alt="Generative AI neural network creating text and code" class="img-fluid services-img">
+              <span class="service-kicker"><i class="bi bi-stars me-1"></i> Generative AI &amp; Custom LLM Systems</span>
+              <h2>Intelligent Assistants That Understand Your Company's Private World</h2>
+              <p class="service-lead">
+                Public tools like ChatGPT are impressive, but they know nothing about your company's product specs, client agreements, past support tickets, or internal procedures. We build private, highly secure Generative AI solutions and custom Large Language Model systems that read your internal knowledge, speak your brand's voice, and assist your team without ever leaking your sensitive data.
+              </p>
+
+              <!-- Section: Problems Solved -->
+              <div class="service-section-title"><i class="bi bi-exclamation-triangle"></i> Everyday Headaches We Solve For You</div>
+              <div class="card-deck-grid">
+                <div class="problem-card">
+                  <h5><i class="bi bi-x-circle"></i> Endless Document Searching</h5>
+                  <p>Staff losing 45+ minutes every day digging through PDFs, nested Google Drive folders, and emails to answer basic operational questions.</p>
+                </div>
+                <div class="problem-card">
+                  <h5><i class="bi bi-x-circle"></i> Burned Out Support Teams</h5>
+                  <p>Customer support reps spending 80% of their shifts repeating the exact same responses to common questions instead of solving complex tickets.</p>
+                </div>
+                <div class="problem-card">
+                  <h5><i class="bi bi-x-circle"></i> Repetitive Proposal Writing</h5>
+                  <p>Sales and engineering teams drafting client proposals, RFPs, and project summaries from scratch over and over again.</p>
+                </div>
+                <div class="problem-card">
+                  <h5><i class="bi bi-x-circle"></i> Made-Up AI Answers</h5>
+                  <p>Public AI bots hallucinating incorrect facts because they lack verified access to your official internal documentation.</p>
+                </div>
+              </div>
+
+              <!-- Section: Deliverables -->
+              <div class="service-section-title"><i class="bi bi-check2-circle"></i> What You Actually Get From Us</div>
+              <ul class="deliverables-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <div><strong>Private Knowledge Retrieval (RAG):</strong> Assistants connected directly to your private manuals, contracts, and wikis that provide accurate answers and cite the exact source document and page number.</div>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <div><strong>Domain-Specific LLM Fine-Tuning:</strong> We tune models on your industry's specialized vocabulary — whether in law, medical technology, tax accounting, or specialized engineering.</div>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <div><strong>Multi-Channel Deployment:</strong> Deploy your assistant wherever your staff or customers are — WhatsApp, Slack, Microsoft Teams, Zendesk, or directly inside your website or web app.</div>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <div><strong>Enterprise Guardrails &amp; Privacy:</strong> Complete security sandboxing that ensures private company data never leaves your infrastructure or trains public models.</div>
+                </li>
+              </ul>
+
+              <!-- Section: 4-Step Process -->
+              <div class="service-section-title"><i class="bi bi-diagram-3"></i> How We Work Together</div>
+              <div class="process-steps-grid">
+                <div class="process-step-box">
+                  <span class="step-badge">STEP 01</span>
+                  <h6>Data Ingestion</h6>
+                  <p>We securely connect and vectorize your knowledge base, manuals, and FAQs.</p>
+                </div>
+                <div class="process-step-box">
+                  <span class="step-badge">STEP 02</span>
+                  <h6>Prompt &amp; RAG Tuning</h6>
+                  <p>We build a test prototype within 7 days and benchmark answers against real queries.</p>
+                </div>
+                <div class="process-step-box">
+                  <span class="step-badge">STEP 03</span>
+                  <h6>Safety Guardrails</h6>
+                  <p>We stress-test edge cases to ensure the assistant never invents facts or shares restricted info.</p>
+                </div>
+                <div class="process-step-box">
+                  <span class="step-badge">STEP 04</span>
+                  <h6>Live Rollout</h6>
+                  <p>Seamless deployment with query analytics so you can see what users ask most frequently.</p>
+                </div>
+              </div>
+
+              <!-- Case Highlight -->
+              <div class="case-highlight-box">
+                <h6><i class="bi bi-trophy"></i> Case in Point: Real Impact</h6>
+                <p>A B2B equipment manufacturer implemented our private RAG assistant across 600 pages of technical machinery manuals. Support engineers cut their average lookup and diagnostic time from <strong>38 minutes down to 45 seconds</strong>, boosting first-call resolution by <strong>44%</strong> in the first month.</p>
+              </div>
+
+              <!-- CTA Banner -->
+              <div class="service-cta-banner">
+                <div>
+                  <h4>Ready to build a private AI assistant for your team?</h4>
+                  <p>See a working demo tailored to your company's documents. Let's discuss what an assistant can do for your workflows.</p>
+                </div>
+                <a href="contact.html" class="btn-service-cta">Build Your AI Assistant</a>
+              </div>
+            </div>
+
+            <!-- TAB 4: AI-Powered Automation -->
+            <div class="service-pane" id="tab-4">
+              <img src="assets/img/service-detail-3.jpg" alt="AI robot and human collaborating in intelligent automation" class="img-fluid services-img">
+              <span class="service-kicker"><i class="bi bi-robot me-1"></i> AI-Powered Intelligent Automation</span>
+              <h2>Let Intelligent Systems Handle the Drudgery So Humans Can Do Great Work</h2>
+              <p class="service-lead">
+                Humans are exceptional at creative problem solving, strategic decisions, and building customer relationships. Humans are terrible at typing invoice numbers into accounting software 300 times a day. We design and build intelligent automation pipelines that handle your high-volume, repetitive digital operations quickly, accurately, and without getting tired.
+              </p>
+
+              <!-- Section: Problems Solved -->
+              <div class="service-section-title"><i class="bi bi-exclamation-triangle"></i> Everyday Headaches We Solve For You</div>
+              <div class="card-deck-grid">
+                <div class="problem-card">
+                  <h5><i class="bi bi-x-circle"></i> Invoice &amp; PO Delays</h5>
+                  <p>Vendors and orders waiting days for human staff to open email attachments, check numbers, and manually key them into ERP systems.</p>
+                </div>
+                <div class="problem-card">
+                  <h5><i class="bi bi-x-circle"></i> Costly Human Typos</h5>
+                  <p>Accidentally mistyping account numbers, misreading handwritten forms, or billing wrong SKUs, causing expensive reconciliations.</p>
+                </div>
+                <div class="problem-card">
+                  <h5><i class="bi bi-x-circle"></i> Disconnected Software Silos</h5>
+                  <p>Staff spending half their day acting as human bridges — copying data from your CRM into spreadsheets and then into shipping portals.</p>
+                </div>
+                <div class="problem-card">
+                  <h5><i class="bi bi-x-circle"></i> Customer Backlogs</h5>
+                  <p>Customer orders and requests received after business hours sitting unhandled until the next morning, slowing down delivery.</p>
+                </div>
+              </div>
+
+              <!-- Section: Deliverables -->
+              <div class="service-section-title"><i class="bi bi-check2-circle"></i> What You Actually Get From Us</div>
+              <ul class="deliverables-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <div><strong>Intelligent Document Processing:</strong> Computer vision and NLP models that read, extract, and classify data from scanned bills, PDFs, physical receipts, and unstructured email text.</div>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <div><strong>End-to-End Workflow Automation:</strong> Inbound leads, support tickets, and orders get validated, processed, and routed into your databases automatically 24 hours a day.</div>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <div><strong>Human-in-the-Loop Review Portals:</strong> The AI handles 95% of standard cases without intervention, and flags only the ambiguous 5% to human managers on an easy visual approval screen.</div>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <div><strong>Custom API Connectors:</strong> We connect older legacy on-premise software with modern cloud applications so your data flows seamlessly without expensive software migrations.</div>
+                </li>
+              </ul>
+
+              <!-- Section: 4-Step Process -->
+              <div class="service-section-title"><i class="bi bi-diagram-3"></i> How We Work Together</div>
+              <div class="process-steps-grid">
+                <div class="process-step-box">
+                  <span class="step-badge">STEP 01</span>
+                  <h6>Process Mapping</h6>
+                  <p>We trace every manual click and step to locate your largest operational bottlenecks.</p>
+                </div>
+                <div class="process-step-box">
+                  <span class="step-badge">STEP 02</span>
+                  <h6>Extraction Model</h6>
+                  <p>We train specialized extraction models on your real invoice and form templates.</p>
+                </div>
+                <div class="process-step-box">
+                  <span class="step-badge">STEP 03</span>
+                  <h6>Parallel Testing</h6>
+                  <p>The automated pipeline runs alongside your team until accuracy meets strict 99%+ standards.</p>
+                </div>
+                <div class="process-step-box">
+                  <span class="step-badge">STEP 04</span>
+                  <h6>Full Deployment</h6>
+                  <p>Complete rollout with live error-handling alerts whenever vendor layouts change.</p>
+                </div>
+              </div>
+
+              <!-- Case Highlight -->
+              <div class="case-highlight-box">
+                <h6><i class="bi bi-trophy"></i> Case in Point: Real Impact</h6>
+                <p>A logistics and freight handling business previously had 4 full-time clerks spending 6 hours each day manually processing paper customs clearance documents. After rolling out our intelligent document extraction pipeline, processing time fell from <strong>24 aggregate hours down to 18 minutes</strong>, saving over ₹22 Lakhs annually in overhead.</p>
+              </div>
+
+              <!-- CTA Banner -->
+              <div class="service-cta-banner">
+                <div>
+                  <h4>Ready to free your team from repetitive busywork?</h4>
+                  <p>Tell us what manual task drains your team's energy the most. We'll show you how it can run completely automatically.</p>
+                </div>
+                <a href="contact.html" class="btn-service-cta">Automate Your Workflows</a>
+              </div>
+            </div>
+
+            <!-- TAB 5: Cognitive Machine Learning -->
+            <div class="service-pane" id="tab-5">
+              <img src="assets/img/service-detail-5.jpg" alt="Cognitive machine learning model visualization" class="img-fluid services-img">
+              <span class="service-kicker"><i class="bi bi-cpu me-1"></i> Cognitive Machine Learning &amp; Computer Vision</span>
+              <h2>Adaptive Systems That Perceive, Recognize, and Continuously Learn</h2>
+              <p class="service-lead">
+                Cognitive Machine Learning goes far beyond standard data analysis. We build intelligent visual and sensory perception systems that can inspect camera feeds, detect microscopic defects on manufacturing lines, recognize intricate fraud patterns, and continuously adapt to new data in real time — getting smarter the longer they run.
+              </p>
+
+              <!-- Section: Problems Solved -->
+              <div class="service-section-title"><i class="bi bi-exclamation-triangle"></i> Everyday Headaches We Solve For You</div>
+              <div class="card-deck-grid">
+                <div class="problem-card">
+                  <h5><i class="bi bi-x-circle"></i> Quality Control Fatigue</h5>
+                  <p>Human inspectors naturally missing microscopic defects after inspecting thousands of products on high-speed manufacturing lines.</p>
+                </div>
+                <div class="problem-card">
+                  <h5><i class="bi bi-x-circle"></i> Catastrophic Equipment Failures</h5>
+                  <p>Pumps, turbines, and motors breaking down unexpectedly, leading to thousands of dollars in lost manufacturing hours and repair bills.</p>
+                </div>
+                <div class="problem-card">
+                  <h5><i class="bi bi-x-circle"></i> Sophisticated Fraud Schemes</h5>
+                  <p>Bad actors easily bypassing basic threshold rules in financial or payment transactions because patterns evolve constantly.</p>
+                </div>
+                <div class="problem-card">
+                  <h5><i class="bi bi-x-circle"></i> Model Accuracy Decay</h5>
+                  <p>Machine learning models built a year ago quietly degrading in performance because real-world customer behaviors shifted.</p>
+                </div>
+              </div>
+
+              <!-- Section: Deliverables -->
+              <div class="service-section-title"><i class="bi bi-check2-circle"></i> What You Actually Get From Us</div>
+              <ul class="deliverables-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <div><strong>High-Speed Computer Vision Systems:</strong> Real-time image and video processing models for defect inspection, object categorization, facial safety verification, and dimension measurement.</div>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <div><strong>Predictive Maintenance Engines:</strong> IoT and vibration sensor analytics that flag hardware degradation and component wear weeks before an actual failure occurs.</div>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <div><strong>Deep Anomaly Detection:</strong> Self-learning neural networks that spot subtle, non-linear deviations in banking, telecommunications, or cybersecurity data streams.</div>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <div><strong>Automated Continuous Retraining (MLOps):</strong> Production-ready pipelines that automatically retrain and benchmark models against incoming ground truth, ensuring permanent accuracy.</div>
+                </li>
+              </ul>
+
+              <!-- Section: 4-Step Process -->
+              <div class="service-section-title"><i class="bi bi-diagram-3"></i> How We Work Together</div>
+              <div class="process-steps-grid">
+                <div class="process-step-box">
+                  <span class="step-badge">STEP 01</span>
+                  <h6>Sensory &amp; Vision Audit</h6>
+                  <p>We analyze your lighting, camera angles, or sensor streams to define ground-truth benchmarks.</p>
+                </div>
+                <div class="process-step-box">
+                  <span class="step-badge">STEP 02</span>
+                  <h6>Custom Architecture</h6>
+                  <p>We train lightweight neural architectures optimized for high frame rates and near-zero latency.</p>
+                </div>
+                <div class="process-step-box">
+                  <span class="step-badge">STEP 03</span>
+                  <h6>Edge / Cloud Deployment</h6>
+                  <p>We deploy models directly on edge devices (NVIDIA Jetson, Intel OpenVINO) or scalable cloud servers.</p>
+                </div>
+                <div class="process-step-box">
+                  <span class="step-badge">STEP 04</span>
+                  <h6>Self-Healing MLOps</h6>
+                  <p>Automated pipelines monitor confidence metrics and retrain models as new product variants appear.</p>
+                </div>
+              </div>
+
+              <!-- Case Highlight -->
+              <div class="case-highlight-box">
+                <h6><i class="bi bi-trophy"></i> Case in Point: Real Impact</h6>
+                <p>An automated packaging facility was experiencing an unacceptable 4.2% return rate due to faulty cap sealing that human spot-checkers couldn't catch at 180 units per minute. Our custom edge computer vision model inspected 100% of units on the fly, catching <strong>99.8% of defects</strong> with <strong>zero line slowdown</strong> and virtually eliminating client warranty claims.</p>
+              </div>
+
+              <!-- CTA Banner -->
+              <div class="service-cta-banner">
+                <div>
+                  <h4>Ready to bring cognitive intelligence into your operations?</h4>
+                  <p>Whether you need computer vision on a factory floor or adaptive learning in a digital product, let's explore what's possible.</p>
+                </div>
+                <a href="contact.html" class="btn-service-cta">Talk With an ML Architect</a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Service Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">NexMutation</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Badarpur</p>
+            <p>New Delhi, IN 110044</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 9643231053</span></p>
+            <p><strong>Email:</strong> <span>nexmutation.technology@gmail.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="about.html">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="services.html">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="portfolio.html">Portfolio</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html">Data Science &amp; Analytics</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html">AI Strategy &amp; Consulting</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html">Generative AI Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html">AI Education</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Stay Connected</h4>
+          <p>Never miss an update — follow us for the latest news and insights!</p>
+          <div class="social-links d-flex">
+            <a href="https://www.linkedin.com/in/nexmutation-technology-548414206/" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+            <a href="https://x.com/nexmutation" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/nexmutation/" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/nexmutation/" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com/@nexmutationtechnology4758" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">NexMutation</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by <a href="https://nexmutation.com/" target="_blank" rel="noopener">NexMutation</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js?v=3.1"></script>
+
+  <!-- Tab switching logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const tabButtons = document.querySelectorAll('#service-tabs a[data-tab]');
+      const tabPanes   = document.querySelectorAll('.service-pane');
+
+      function activateTab(tabId) {
+        tabButtons.forEach(b => {
+          if (b.getAttribute('data-tab') === tabId) {
+            b.classList.add('active');
+          } else {
+            b.classList.remove('active');
+          }
+        });
+        tabPanes.forEach(p => {
+          if (p.id === tabId) {
+            p.classList.add('active');
+          } else {
+            p.classList.remove('active');
+          }
+        });
+      }
+
+      tabButtons.forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = btn.getAttribute('data-tab');
+          if (targetId) activateTab(targetId);
+        });
+      });
+
+      // Support hash navigation if arrived with #tab-2 etc.
+      if (window.location.hash) {
+        const hash = window.location.hash.replace('#', '');
+        if (document.getElementById(hash)) {
+          activateTab(hash);
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>

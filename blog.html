@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <script>
+    (function() {
+      const theme = localStorage.getItem('nex_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Blog - NexMutation | AI & Technology Insights</title>
+  <meta name="description" content="Read expert insights on artificial intelligence, LLMs, machine learning architectures, and data engineering from NexMutation.">
+  <meta name="keywords" content="NexMutation Blog, AI Articles, Machine Learning Insights, Generative AI Guide">
+  <link rel="canonical" href="https://nexmutation.com/blog.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nexmutation.com/blog.html">
+  <meta property="og:title" content="Blog - NexMutation | AI & Technology Insights">
+  <meta property="og:description" content="Read expert insights on artificial intelligence, LLMs, machine learning architectures, and data engineering from NexMutation.">
+  <meta property="og:image" content="https://nexmutation.com/assets/img/website_logo.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://nexmutation.com/blog.html">
+  <meta name="twitter:title" content="Blog - NexMutation | AI & Technology Insights">
+  <meta name="twitter:description" content="Read expert insights on artificial intelligence, LLMs, machine learning architectures, and data engineering from NexMutation.">
+  <meta name="twitter:image" content="https://nexmutation.com/assets/img/website_logo.png">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css?v=3.1" rel="stylesheet">
+</head>
+
+<body class="blog-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/website_logo.png" alt="NexMutation Logo">
+        <span class="sitename">NexMutation</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown"><a href="services.html"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="services.html">All Services</a></li>
+              <li><a href="service-details.html">Data Science & Predictive Analytics</a></li>
+              <li><a href="service-details.html">AI Strategy Consulting</a></li>
+              <li><a href="service-details.html">Generative AI Services</a></li>
+              <li><a href="service-details.html">AI-Powered Automation</a></li>
+            </ul>
+          </li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Toggle dark/light theme" title="Toggle dark/light theme">
+        <i class="bi bi-moon-stars-fill"></i>
+      </button>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container position-relative">
+        <h1>AI Insights & Research</h1>
+        <p>We write about AI in plain language. Real stories, honest opinions, and useful ideas from the people building it.</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Blog</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Blog Posts Section -->
+    <section id="blog-posts" class="blog-posts section">
+
+      <div class="container">
+        <div class="row gy-4">
+
+          <!-- Post 1 -->
+          <div class="col-lg-4">
+            <article class="d-flex flex-column justify-content-between">
+              <div>
+                <div class="post-img">
+                  <img src="assets/img/blog/blog-1.jpg" alt="Generative AI in real business operations" class="img-fluid w-100">
+                </div>
+                <p class="post-category">Generative AI in Practice</p>
+                <h2 class="title">
+                  <a href="blog-details.html">Stop Chasing Fancy AI Demos: How Real Businesses Actually Use LLMs to Save Hours</a>
+                </h2>
+                <p class="text-secondary mb-3" style="font-size: 0.93rem; line-height: 1.6;">
+                  Every day brings a new flashy tech demo, but what happens when the hype cools down? Here is an honest look at the three generative AI workflows that actually create measurable savings for our clients.
+                </p>
+              </div>
+              <div class="d-flex align-items-center pt-3 border-top">
+                <img src="assets/img/blog/blog-author.jpg" alt="Ashish Singh" class="img-fluid post-author-img flex-shrink-0" style="object-fit: cover; width: 48px; height: 48px;">
+                <div class="post-meta">
+                  <p class="post-author mb-0">Ashish Singh</p>
+                  <p class="post-date text-muted"><time datetime="2024-10-12">Oct 12, 2024</time> &bull; 6 min read</p>
+                </div>
+              </div>
+            </article>
+          </div><!-- End post list item -->
+
+          <!-- Post 2 -->
+          <div class="col-lg-4">
+            <article class="d-flex flex-column justify-content-between">
+              <div>
+                <div class="post-img">
+                  <img src="assets/img/blog/blog-2.jpg" alt="Model drift and performance monitoring" class="img-fluid w-100">
+                </div>
+                <p class="post-category">Machine Learning</p>
+                <h2 class="title">
+                  <a href="blog-details.html">Why Your AI Model Quietly Gets Dumber Over Time (And How to Fix Drift)</a>
+                </h2>
+                <p class="text-secondary mb-3" style="font-size: 0.93rem; line-height: 1.6;">
+                  You built a 98% accurate prediction model in January, but by September your forecasts are slipping. Here's why customer behavior shifts wreck static models and how automated retraining saves the day.
+                </p>
+              </div>
+              <div class="d-flex align-items-center pt-3 border-top">
+                <img src="assets/img/blog/blog-author-2.jpg" alt="Neha Kumari" class="img-fluid post-author-img flex-shrink-0" style="object-fit: cover; width: 48px; height: 48px;">
+                <div class="post-meta">
+                  <p class="post-author mb-0">Neha Kumari</p>
+                  <p class="post-date text-muted"><time datetime="2024-09-28">Sep 28, 2024</time> &bull; 5 min read</p>
+                </div>
+              </div>
+            </article>
+          </div><!-- End post list item -->
+
+          <!-- Post 3 -->
+          <div class="col-lg-4">
+            <article class="d-flex flex-column justify-content-between">
+              <div>
+                <div class="post-img">
+                  <img src="assets/img/blog/blog-3.jpg" alt="Predictive analytics and business demand forecasting" class="img-fluid w-100">
+                </div>
+                <p class="post-category">Data Science</p>
+                <h2 class="title">
+                  <a href="blog-details.html">Can AI Really Predict the Future? The Honest Truth About Business Forecasting</a>
+                </h2>
+                <p class="text-secondary mb-3" style="font-size: 0.93rem; line-height: 1.6;">
+                  AI can't read tea leaves, but it can spot hidden seasonal ripples in your inventory and cash flow. Here is how we help businesses forecast demand without falling into common statistical traps.
+                </p>
+              </div>
+              <div class="d-flex align-items-center pt-3 border-top">
+                <img src="assets/img/blog/blog-author.jpg" alt="Ashish Singh" class="img-fluid post-author-img flex-shrink-0" style="object-fit: cover; width: 48px; height: 48px;">
+                <div class="post-meta">
+                  <p class="post-author mb-0">Ashish Singh</p>
+                  <p class="post-date text-muted"><time datetime="2024-09-14">Sep 14, 2024</time> &bull; 7 min read</p>
+                </div>
+              </div>
+            </article>
+          </div><!-- End post list item -->
+
+          <!-- Post 4 -->
+          <div class="col-lg-4">
+            <article class="d-flex flex-column justify-content-between">
+              <div>
+                <div class="post-img">
+                  <img src="assets/img/blog/blog-4.jpg" alt="AI workflow automation in office operations" class="img-fluid w-100">
+                </div>
+                <p class="post-category">Intelligent Automation</p>
+                <h2 class="title">
+                  <a href="blog-details.html">We Automated Our Own Repetitive Office Busywork. Here Is What Happened.</a>
+                </h2>
+                <p class="text-secondary mb-3" style="font-size: 0.93rem; line-height: 1.6;">
+                  Nobody gets excited to copy invoice numbers between PDF attachments and spreadsheets. We turned our automation tools on our own internal operations — here is how much time we won back.
+                </p>
+              </div>
+              <div class="d-flex align-items-center pt-3 border-top">
+                <img src="assets/img/blog/blog-author-2.jpg" alt="Neha Kumari" class="img-fluid post-author-img flex-shrink-0" style="object-fit: cover; width: 48px; height: 48px;">
+                <div class="post-meta">
+                  <p class="post-author mb-0">Neha Kumari</p>
+                  <p class="post-date text-muted"><time datetime="2024-08-30">Aug 30, 2024</time> &bull; 4 min read</p>
+                </div>
+              </div>
+            </article>
+          </div><!-- End post list item -->
+
+          <!-- Post 5 -->
+          <div class="col-lg-4">
+            <article class="d-flex flex-column justify-content-between">
+              <div>
+                <div class="post-img">
+                  <img src="assets/img/blog/blog-5.jpg" alt="Private document search and RAG knowledge assistants" class="img-fluid w-100">
+                </div>
+                <p class="post-category">Enterprise Knowledge (RAG)</p>
+                <h2 class="title">
+                  <a href="blog-details.html">How to Let Your Team Chat With Company Documents Without Leaking Secrets</a>
+                </h2>
+                <p class="text-secondary mb-3" style="font-size: 0.93rem; line-height: 1.6;">
+                  Pasting sensitive client contracts into public chatbots is a massive security hazard. Here is how Retrieval-Augmented Generation lets your team query internal PDFs safely behind your firewall.
+                </p>
+              </div>
+              <div class="d-flex align-items-center pt-3 border-top">
+                <img src="assets/img/blog/blog-author.jpg" alt="Ashish Singh" class="img-fluid post-author-img flex-shrink-0" style="object-fit: cover; width: 48px; height: 48px;">
+                <div class="post-meta">
+                  <p class="post-author mb-0">Ashish Singh</p>
+                  <p class="post-date text-muted"><time datetime="2024-08-11">Aug 11, 2024</time> &bull; 8 min read</p>
+                </div>
+              </div>
+            </article>
+          </div><!-- End post list item -->
+
+          <!-- Post 6 -->
+          <div class="col-lg-4">
+            <article class="d-flex flex-column justify-content-between">
+              <div>
+                <div class="post-img">
+                  <img src="assets/img/blog/blog-6.jpg" alt="Computer vision camera analysis in manufacturing" class="img-fluid w-100">
+                </div>
+                <p class="post-category">Computer Vision</p>
+                <h2 class="title">
+                  <a href="blog-details.html">Tired Eyes vs. AI Cameras: Deploying Vision Models on Fast Assembly Lines</a>
+                </h2>
+                <p class="text-secondary mb-3" style="font-size: 0.93rem; line-height: 1.6;">
+                  Human inspectors get fatigued after checking 500 packages an hour. We put computer vision models directly onto high-speed conveyor belts — here is what it takes to catch 99.8% of defects without slowing down.
+                </p>
+              </div>
+              <div class="d-flex align-items-center pt-3 border-top">
+                <img src="assets/img/blog/blog-author-2.jpg" alt="Neha Kumari" class="img-fluid post-author-img flex-shrink-0" style="object-fit: cover; width: 48px; height: 48px;">
+                <div class="post-meta">
+                  <p class="post-author mb-0">Neha Kumari</p>
+                  <p class="post-date text-muted"><time datetime="2024-07-22">Jul 22, 2024</time> &bull; 6 min read</p>
+                </div>
+              </div>
+            </article>
+          </div><!-- End post list item -->
+
+        </div>
+      </div>
+
+    </section><!-- /Blog Posts Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">NexMutation</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Badarpur</p>
+            <p>New Delhi, IN 110044</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 9643231053</span></p>
+            <p><strong>Email:</strong> <span>nexmutation.technology@gmail.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="about.html">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="services.html">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="portfolio.html">Portfolio</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="services.html">Data Science & Predictive Analytics</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="services.html">AI Strategy & Consulting</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="services.html">Generative AI Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="services.html">AI Education</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Stay Connected</h4>
+          <p>Never miss an update—follow us for the latest news and insights!</p>
+          <div class="social-links d-flex">
+            <a href="https://www.linkedin.com/in/nexmutation-technology-548414206/" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+            <a href="https://x.com/nexmutation" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/nexmutation/" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/nexmutation/" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com/@nexmutationtechnology4758" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">NexMutation</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by <a href="https://nexmutation.com/" target="_blank" rel="noopener">NexMutation</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js?v=3.1"></script>
+
+</body>
+
+</html>
